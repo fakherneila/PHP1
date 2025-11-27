@@ -1,5 +1,5 @@
 <?php
-//Exercice 3 les Structures de contrôle 
+
 //1. Ecrire un scripte PHP qui permet de comparer deux variables et afficher celle la plus grande.
 $a = 10;
 $b = 20;

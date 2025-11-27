@@ -26,25 +26,25 @@
 
     // Récupération de l'historique existant
     if (isset($_COOKIE[$cookie_name])) {
-        // On décode le JSON (plus propre que séparateur virgule)
+        
         $visites = json_decode($_COOKIE[$cookie_name], true);
         if (!is_array($visites)) $visites = [];
     } else {
         $visites = [];
     }
 
-    // On ajoute la nouvelle visite en première position
+   
     array_unshift($visites, $nouvelle_visite);
 
-    // On garde seulement les 50 dernières visites (pour ne pas exploser le cookie)
+    
     if (count($visites) > 50) {
         $visites = array_slice($visites, 0, 50);
     }
 
-    // On sauvegarde dans le cookie (expire dans 1 an)
+
     setcookie($cookie_name, json_encode($visites), time() + 365*24*3600, "/");
 
-    // Affichage
+    
     echo "<div class='visites'>";
     if (count($visites) == 1) {
         echo "<p>Bienvenue ! C'est votre <strong>première visite</strong> !</p>";

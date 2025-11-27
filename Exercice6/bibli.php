@@ -1,7 +1,7 @@
 <?php
 // bibli.php
 
-$livres = []; // tableau global ou chargé depuis un fichier JSON/base de données
+$livres = []; 
 
 function ajouterLivre($titre, $annee, $image) {
     global $livres;
@@ -12,7 +12,7 @@ function ajouterLivre($titre, $annee, $image) {
         'image' => $image
     ];
 
-    // Optionnel : sauvegarder dans un fichier pour persistance
+    
     file_put_contents('livres.json', json_encode($livres, JSON_PRETTY_PRINT));
 }
 ?>

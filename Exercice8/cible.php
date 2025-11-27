@@ -27,7 +27,7 @@
         $prenom = htmlspecialchars($_POST['prenom'] ?? '');
         $mail   = htmlspecialchars($_POST['mail'] ?? '');
 
-        // Les goûts (checkbox → tableau)
+        
         $gouts = $_POST['gouts'] ?? [];
         if (!is_array($gouts)) $gouts = [];
 
@@ -45,7 +45,7 @@
         echo "</p>";
         echo "</div>";
 
-        // Gestion de la photo (optionnel mais propre)
+       
         if (isset($_FILES['photo']) && $_FILES['photo']['error'] == 0) {
             $dossier = "uploads/";
             if (!is_dir($dossier)) mkdir($dossier, 0777, true);

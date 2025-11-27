@@ -1,5 +1,5 @@
 <?php
-session_start(); // TRÈS IMPORTANT : sans ça, $_SESSION est vide !
+session_start(); 
 ?>
 
 <!DOCTYPE html>
@@ -20,7 +20,7 @@ session_start(); // TRÈS IMPORTANT : sans ça, $_SESSION est vide !
     <h1>Page 2 - Lecture de la session</h1>
 
     <?php
-    // On vérifie que les variables existent
+  
     if (isset($_SESSION['prenom']) && isset($_SESSION['age'])) {
         echo "<p>Bonjour <span class='valeur'>" . $_SESSION['prenom'] . "</span> !</p>";
         echo "<p>Vous avez <span class='valeur'>" . $_SESSION['age'] . " ans</span>.</p>";

@@ -18,7 +18,7 @@
     <h1>Données reçues !</h1>
 
     <?php
-    // Vérifie s'il y a au moins un paramètre dans l'URL
+   
     if (!empty($_GET)) {
         $nom = htmlspecialchars($_GET['nom'] ?? 'Inconnu');
         $age = htmlspecialchars($_GET['age'] ?? 'Non renseigné');

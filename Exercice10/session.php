@@ -1,7 +1,6 @@
 <?php
 session_start(); // Obligatoire au tout début
 
-// On crée des variables de session
 $_SESSION['prenom'] = 'Issats';
 $_SESSION['age']    = 29;
 ?>
